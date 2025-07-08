@@ -1,0 +1,21 @@
+@use "./styles/variables.scss";
+
+$lightGradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+$darkGradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+@mixin defaultContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 40px;
+}
+
+.appContainer {
+  @include defaultContainer();
+  background: $lightGradient;
+}
+
+.appDarkContainer {
+  @include defaultContainer();
+  background: $darkGradient;
+}

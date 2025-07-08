@@ -1,0 +1,19 @@
+@use "../../styles/variables";
+
+@mixin defaultContainer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+}
+
+.lightContainer {
+  @include defaultContainer();
+  background: #fff;
+}
+
+.darkContainer {
+  @include defaultContainer();
+  background: variables.$neutral800;
+}

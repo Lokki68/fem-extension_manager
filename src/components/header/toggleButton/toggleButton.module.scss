@@ -1,0 +1,28 @@
+@use "../../../styles/variables";
+
+@mixin defaultButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.lightContainer {
+  @include defaultButton();
+  background: variables.$neutral100;
+
+  &:hover {
+    background: variables.$neutral300;
+  }
+}
+
+.darkContainer {
+  @include defaultButton();
+  background: variables.$neutral700;
+
+  &:hover {
+    background: variables.$neutral600;
+  }
+}
