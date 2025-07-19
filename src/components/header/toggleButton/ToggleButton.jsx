@@ -7,7 +7,7 @@ import styles from "./toggleButton.module.scss";
 const ToggleButton = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   return (
-    <div
+    <button
       className={darkMode ? styles.darkContainer : styles.lightContainer}
       onClick={toggleDarkMode}
     >
@@ -16,7 +16,7 @@ const ToggleButton = () => {
       ) : (
         <img src={lightImage} alt="toggle dark mode" />
       )}
-    </div>
+    </button>
   );
 };
 

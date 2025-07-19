@@ -1,0 +1,40 @@
+@use "../../../../styles/variables";
+
+@mixin defaultContainer {
+  padding: 5px 15px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.buttonLightContainer {
+  @include defaultContainer();
+  background: #fff;
+  border-color: variables.$neutral300;
+  color: variables.$neutral800;
+
+  &:hover {
+    background: variables.$neutral100;
+    color: variables.$neutral600;
+  }
+
+  &.active {
+    color: #fff;
+    background: variables.$red700;
+  }
+}
+
+.buttonDarkContainer {
+  @include defaultContainer();
+  background: variables.$neutral800;
+  border-color: variables.$neutral600;
+  color: #fff;
+
+  &:hover {
+    background: variables.$neutral600;
+  }
+
+  &.active {
+    color: variables.$neutral900;
+    background: variables.$red500;
+  }
+}

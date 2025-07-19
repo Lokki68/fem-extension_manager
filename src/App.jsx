@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import styles from "./app.module.scss";
+import ExtensionsList from "./components/extensions/ExtensionsList";
 import Header from "./components/header/Header";
 import { DarkModeContext } from "./context/DarkModeProvider";
 
@@ -8,6 +9,7 @@ function App() {
   return (
     <div className={darkMode ? styles.appDarkContainer : styles.appContainer}>
       <Header />
+      <ExtensionsList />
     </div>
   );
 }

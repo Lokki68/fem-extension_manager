@@ -1,0 +1,22 @@
+@use "../../../styles/variables";
+
+@mixin headerDefaultContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.darkContainer {
+  @include headerDefaultContainer();
+  color: #fff;
+}
+
+.lightContainer {
+  @include headerDefaultContainer();
+  color: variables.$neutral900;
+}
+
+.filterButtonContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

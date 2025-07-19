@@ -1,0 +1,54 @@
+@use "../../../styles/variables";
+
+@mixin defaultContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid;
+  height: 150px;
+}
+
+.itemLightContainer {
+  @include defaultContainer();
+  background-color: #fff;
+  color: variables.$neutral800;
+  border-color: variables.$neutral300;
+}
+
+.itemDarkContainer {
+  @include defaultContainer();
+  color: #fff;
+  background-color: variables.$neutral800;
+  border-color: variables.$neutral600;
+}
+
+.topContainer {
+  display: flex;
+  gap: 1rem;
+
+  .logoContainer {
+    width: 25%;
+  }
+
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h3 {
+      margin: 0;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-weight: 200;
+    }
+  }
+}
+
+.bottomContainer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
