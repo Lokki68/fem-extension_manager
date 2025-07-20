@@ -22,10 +22,23 @@ function ExtensionsProvider({ children }) {
     setExtensionsData((prevExtension) => [...prevExtension, updatedData]);
   }
 
+  function findExtension(id) {
+    const resultExtension = extensionsData.filter(
+      (extension) => extension.id === id
+    );
+
+    if (!resultExtension) {
+      throw new Error("Extension not found");
+    }
+
+    return resultExtension;
+  }
+
   return (
     <ExtensionsContext.Provider
       value={{
         extensionsData,
+        findExtension,
         activeData,
         inactiveData,
       }}

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import Switch from "react-switch";
 import { DarkModeContext } from "../../../context/DarkModeProvider";
 import styles from "./item.module.scss";
 
@@ -11,6 +12,10 @@ const Item = ({ data }) => {
     const logoArray = logo.split("/");
 
     return `${baseImageUrl}${logoArray[logoArray.length - 1]}`;
+  };
+
+  const handleSwitchChange = () => {
+    console.log("switch changed");
   };
 
   return (
@@ -30,7 +35,15 @@ const Item = ({ data }) => {
       </div>
       <div className={styles.bottomContainer}>
         <div>remove</div>
-        <div>{isActive ? "true" : "false"}</div>
+        <Switch
+          checked={isActive}
+          onChange={handleSwitchChange}
+          checkedIcon={false}
+          uncheckedIcon={false}
+          onColor="#c7221a"
+          height={24}
+          width={48}
+        />
       </div>
     </div>
   );
