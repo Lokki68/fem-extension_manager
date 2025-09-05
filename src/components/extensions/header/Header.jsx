@@ -3,7 +3,7 @@ import { DarkModeContext } from "../../../context/DarkModeProvider";
 import FilterButton from "../list/filterButton/FilterButton";
 import styles from "./header.module.scss";
 
-const Header = ({ activeFilter, allData, activeData, inactiveData }) => {
+const Header = ({ activeFilter, fnFilter }) => {
   const { darkMode } = useContext(DarkModeContext);
 
   return (
@@ -12,17 +12,17 @@ const Header = ({ activeFilter, allData, activeData, inactiveData }) => {
       <div className={styles.filterButtonContainer}>
         <FilterButton
           name="All"
-          fN={allData}
+          fN={() => fnFilter("all")}
           isActive={activeFilter === "all"}
         />
         <FilterButton
           name="Active"
-          fN={activeData}
+          fN={() => fnFilter("active")}
           isActive={activeFilter === "active"}
         />
         <FilterButton
           name="Inactive"
-          fN={inactiveData}
+          fN={() => fnFilter("inactive")}
           isActive={activeFilter === "inactive"}
         />
       </div>

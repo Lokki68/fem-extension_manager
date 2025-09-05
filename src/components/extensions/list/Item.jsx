@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import Switch from "react-switch";
 import { DarkModeContext } from "../../../context/DarkModeProvider";
+import { useToggleExtension } from "../../../hooks/useToggleExtension";
 import styles from "./item.module.scss";
 
 const Item = ({ data }) => {
+  const toggleMutation = useToggleExtension();
   const { darkMode } = useContext(DarkModeContext);
-  const { logo, name, description, isActive } = data;
+  const { id, logo, name, description, isActive } = data;
 
   const imageUrl = (logo) => {
     const baseImageUrl = "assets/images/";
@@ -15,7 +17,7 @@ const Item = ({ data }) => {
   };
 
   const handleSwitchChange = () => {
-    console.log("switch changed");
+    toggleMutation.mutate({ id, newValue: !isActive });
   };
 
   return (

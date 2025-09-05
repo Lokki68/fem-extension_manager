@@ -535,6 +535,30 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.44.2.tgz#660018c9696ad4f48abe8c5d56db53c81aadba25"
   integrity sha512-3+QZROYfJ25PDcxFF66UEk8jGWigHJeecZILvkPkyQN7oc5BvFo4YEXFkOs154j3FTMp9mn9Ky8RCOwastduEA==
 
+"@tanstack/query-core@5.86.0":
+  version "5.86.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.86.0.tgz#9ac5381550582aa54f135dfc381c216aa323103d"
+  integrity sha512-Y6ibQm6BXbw6w1p3a5LrPn8Ae64M0dx7hGmnhrm9P+XAkCCKXOwZN0J5Z1wK/0RdNHtR9o+sWHDXd4veNI60tQ==
+
+"@tanstack/query-devtools@5.86.0":
+  version "5.86.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-devtools/-/query-devtools-5.86.0.tgz#77c90d625f4c9f92c948ecab8f5cabb4e360ccc8"
+  integrity sha512-/JDw9BP80eambEK/EsDMGAcsL2VFT+8F5KCOwierjPU7QP8Wt1GT32yJpn3qOinBM8/zS3Jy36+F0GiyJp411A==
+
+"@tanstack/react-query-devtools@^5.86.0":
+  version "5.86.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query-devtools/-/react-query-devtools-5.86.0.tgz#dbe074160f10b8d186b7fc21eb82237b7ff536bc"
+  integrity sha512-+50IcXI+54qHx3IDccbTala4tkToKxa0WKqP4XWlTnP1mQNfHO3dJj8wwnzpG50os69kpSbnU8C98Q/i8b6lyA==
+  dependencies:
+    "@tanstack/query-devtools" "5.86.0"
+
+"@tanstack/react-query@^5.86.0":
+  version "5.86.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.86.0.tgz#4f0a669c67fbd724e9b5712d10d6c7691b665df4"
+  integrity sha512-jgS/v0oSJkGHucv9zxOS8rL7mjATh1XO3K4eqAV4WMpAly8okcBrGi1YxRZN5S4B59F54x9JFjWrK5vMAvJYqA==
+  dependencies:
+    "@tanstack/query-core" "5.86.0"
+
 "@types/babel__core@^7.20.5":
   version "7.20.5"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.20.5.tgz#3df15f27ba85319caa07ba08d0721889bb39c017"

@@ -5,7 +5,7 @@ function List({ data }) {
   return (
     <div className={styles.listContainer}>
       {data.map((item, index) => (
-        <Item id={item.id} key={index} />
+        <Item data={item} key={index} />
       ))}
     </div>
   );
